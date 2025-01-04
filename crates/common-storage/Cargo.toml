@@ -1,0 +1,12 @@
+[package]
+name = "common-storage"
+version = "0.0.1"
+edition = "2021"
+
+[dependencies]
+anyhow.workspace = true
+aliyun-oss-rust-sdk.workspace = true
+chrono.workspace = true
+uuid = {workspace=true,features=["v4"]}
+common-utils.workspace = true
+async-trait = "0.1.83"

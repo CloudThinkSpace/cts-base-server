@@ -1,0 +1,17 @@
+[workspace]
+resolver = "2"
+members = ["crates/common-utils", "crates/common-db", "crates/common-storage", "crates/common-server"]
+
+[workspace.dependencies]
+common-storage = { path = "crates/common-storage" }
+common-utils = { path = "crates/common-utils" }
+common-db = { path = "crates/common-db" }
+aliyun-oss-rust-sdk = "0.2.1"
+anyhow = "1.0.95"
+chrono = "0.4.39"
+uuid = "1.11.0"
+axum = "0.8.1"
+serde = "1.0.217"
+serde_json = "1.0.134"
+tokio = "1.42.0"
+serde_yaml = "0.9.33"
