@@ -3,6 +3,10 @@ use std::io::Read;
 pub mod oss_config;
 pub mod file_config;
 
+
+/// 读取配置文件内容
+///
+/// @param path 配置文件路径
 pub fn read_config_content(path: &str) -> String {
     let mut file = match File::open(path) {
         Ok(f) => f,

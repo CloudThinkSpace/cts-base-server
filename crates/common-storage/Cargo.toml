@@ -9,4 +9,3 @@ aliyun-oss-rust-sdk.workspace = true
 chrono.workspace = true
 uuid = {workspace=true,features=["v4"]}
 common-utils.workspace = true
-async-trait = "0.1.83"
