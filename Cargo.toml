@@ -6,6 +6,7 @@ members = ["crates/common-utils", "crates/common-db", "crates/common-storage", "
 common-storage = { path = "crates/common-storage" }
 common-utils = { path = "crates/common-utils" }
 common-db = { path = "crates/common-db" }
+common-server = {path = "crates/common-server"}
 aliyun-oss-rust-sdk = "0.2.1"
 anyhow = "1.0.95"
 chrono = "0.4.39"
