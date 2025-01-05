@@ -3,7 +3,8 @@ use anyhow::Result;
 use chrono::{Datelike, Local};
 use common_utils::file::file_util::get_ext;
 use std::fs;
-use std::fs::create_dir_all;
+use std::fs::{create_dir_all, File};
+use std::io::{BufWriter, Write};
 use uuid::Uuid;
 pub struct LocalFile;
 
@@ -25,8 +26,14 @@ impl Storage for LocalFile {
             None => format!("{file_path}/{uuid}"),
             Some(data) => format!("{file_path}/{uuid}.{data}"),
         };
+        // 创建文件
+        let file = File::create(&path)?;
+        let mut buf_write = BufWriter::new(file);
         // 写入数据
-        fs::write(&path, data)?;
+        buf_write.write_all(data)?;
+        // 推入文件
+        buf_write.flush()?;
+
         // 返回文件名和路径
         Ok((file_name.to_string(), path))
     }

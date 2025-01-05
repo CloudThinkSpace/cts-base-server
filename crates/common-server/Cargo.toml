@@ -11,4 +11,4 @@ serde_json.workspace = true
 common-storage.workspace = true
 tokio.workspace = true
 serde_yaml.workspace = true
-bytes = "1.9.0"
+bytes.workspace = true
