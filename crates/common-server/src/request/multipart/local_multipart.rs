@@ -6,10 +6,10 @@ use common_storage::local::LocalFile;
 use common_storage::Storage;
 use crate::config::file_config::get_config;
 use crate::request::CtsFile;
-use crate::request::multipart::CtsFileParse;
+use crate::request::multipart::CtsLocalParse;
 use anyhow::Result;
 
-impl CtsFileParse for Multipart {
+impl CtsLocalParse for Multipart {
     async fn parse(&mut self) -> Result<Vec<CtsFile>> {
         let mut oss_vec = Vec::new();
         while let Some(field) = self.next_field().await? {
