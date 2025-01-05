@@ -1,2 +1,2 @@
 pub mod r#type;
-mod file;
+pub mod file;
