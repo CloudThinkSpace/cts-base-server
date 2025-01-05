@@ -6,7 +6,7 @@ pub enum FileType {
     Other,
 }
 
-fn parse_type(path: String, file_type: FileType) -> HeaderMap {
+pub fn parse_type(path: String, file_type: FileType) -> HeaderMap {
     // 查找是否有点符号
     let index = path.find('.').unwrap_or(usize::MAX);
     //文件扩展名
